@@ -59,14 +59,39 @@ CIRCUIT DIAGRAM
 ![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
 
 
-
-FIGURE -03
+### Before simulation:
+![output](https://github.com/naramala-niharika/EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/blob/main/1.PNG?raw=true)
 
 
 
 
 
 PROGRAM 
+```
+// C++ code
+int ledpin=4;
+int pushbtn=2;
+int val=0;
+void setup()
+{
+ pinMode(ledpin, OUTPUT);
+ pinMode(pushbtn,INPUT);
+}
+
+void loop()
+{
+ val=digitalRead(pushbtn);
+ if(val==0)
+ {
+   digitalWrite(ledpin,HIGH);
+ }
+ else
+ {
+   digitalWrite(ledpin,LOW);
+ }
+}
+```
+
  
  
  
@@ -76,6 +101,10 @@ PROGRAM
 
 
 Output of the simulation :
-
-[My image](username.github.com/repository/img/image.jpg)
+### BEFORE RUNNING THE SIMULATION:
+![output](https://github.com/naramala-niharika/EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/blob/main/3.PNG?raw=true)
+### AFTER RUNNING THE SIMULATION:
+![output](https://github.com/naramala-niharika/EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/blob/main/2.PNG?raw=true)
+### Output
+Thus, we have interfaced a digital input (push button) and blink of LED upon activation.
 
